@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Text</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(16, 6, 33);
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(215, 36, 36, 0.701);
+        }
+
+        .text {
+            font-size: 200px;
+            background: linear-gradient(to right, rgba(0, 168, 253), #fff 35%, #e00a95);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            animation: gradient 1s linear infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 75%;
+                /* transform: rotate(45deg); */
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 70%;
+            }
+        }
+
+
+        .circle {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* color: rgba(215, 36, 36, 0.701); */
+           background: linear-gradient(130deg, rgba(52, 92, 214), #411e82 70%, #55ac2900)
+        }
+        .loader{
+            width: 300px;
+            height:  300px;
+            border-style: solid;
+            border-width: 10px; /* Adjust as needed */
+            border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 255, 0)) 1; /* Adjust colors and direction */
+            border-radius: 50%;
+        }
+        .element {
+  padding: 10px; /* Adjust as needed */
+  background-color: #fff; /* Set background color */
+  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 255, 0));
+  background-position: 0 0; /* Adjust position as needed */
+  background-clip: padding-box; /* Clip gradient to padding */
+  background-size: 100% calc(100% + 20px); /* Adjust size based on border width */
+}
+
+.element:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff; /* Set background color */
+  background-clip: border-box; /* Clip background to border */
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text">Portfolio</h1>
+    </div>
+   
+</body>
+
+</html>

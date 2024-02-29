@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Amazing Navigation Bar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(50, 50, 86);
+            box-sizing: border-box;
+        }
+
+        nav {
+            background: #171c24;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            height: 70px;
+            padding: 0 100px;
+        }
+
+        nav .logo {
+            color: #fff;
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            text-align: left;
+            width: 20%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ul li {
+            position: relative;
+        }
+
+        ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        ul li:hover ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        ul li ul li {
+            width: 200px;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            position: relative;
+        }
+
+        nav a:hover {
+            background-color: #39444f;
+        }
+
+        nav form {
+            display: flex;
+            height: 40px;
+            padding: 2px;
+            background: #1e232b;
+            min-width: 18px !important;
+            border-radius: 2px;
+            border: 1px solid rgba(155, 155, 155, 0.2);
+            float: right;
+            margin-left: auto;
+        }
+
+        form input {
+            height: 100%;
+            padding: 0 10px;
+            border: none;
+            background: none;
+            color: #fff;
+        }
+
+        form button {
+            height: 100%;
+            padding: 0 10px;
+            border: none;
+            background: #39444f;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <label class="logo">Menu</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Language<i class="fa-caret-down"></i></a>
+                <ul>
+                    <li><a class="#">Python</a></li>
+                    <li><a class="#">JavaScript</a></li>
+                    <li><a class="#">Java</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Web Design<i class="fa-caret-down"></i></a>
+                <ul>
+                    <li><a class="#">Front</a></li>
+                    <li><a class="#">Back</a></li>
+                    <li><a class="#">Other<i class="fa-caret-down"></i></a>
+                        <ul>
+                            <li><a class="#">Link</a></li>
+                            <li><a class="#">Work</a></li>
+                            <li><a class="#">Status</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <form>
+            <input type="text" value="" placeholder="Search">
+            <button type="submit">S</button>
+        </form>
+    </nav>
+</body>
+</html>
