@@ -12,3 +12,20 @@ nav{
 .btnPrimary{
   @apply py-2 px-8 bg-secondary font-semibold text-white rounded hover:bg-primary transition-all duration-300
 }
+
+
+/* scroll bar css  */
+body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(246, 246, 246);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(99deg,#EE9AE5,#5961F9 100%);   /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  /* border: 3px solid orange;  */
+   /* creates padding around scroll thumb */
+}

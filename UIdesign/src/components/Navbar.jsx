@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { GrLanguage } from "react-icons/gr";
 import { FaBars, FaXmark } from "react-icons/fa6";
+import {Link} from 'react-scroll';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ function Navbar() {
   ];
   return (
     <>
-      <nav className="bg-white md:px-14 p-4 max-w-screen-2xl mx-auto text-primary fixed top-0 right-0 left-0">
+      <nav className="bg-white md:px-14 p-4 max-w-screen-2xl border-b-2 mx-auto text-primary fixed top-0 right-0 left-0">
         <div className="text-lg container mx-auto flex justify-between items-center font-medium">
           <div className="flex space-x-14 items-center">
             <a
@@ -33,9 +34,9 @@ function Navbar() {
             {/* showing navitem using map  */}
             <ul className="md:flex space-x-12 hidden">
               {navItems.map(({ link, path }) => (
-                <a key={link} href={path} className="block hover:text-gray-300">
+                <Link spy={true} smooth={true} offset={-100} activeClass="active" key={link} to={path} className="block hover:text-gray-300 cursor-pointer  ">
                   {link}
-                </a>
+                </Link>
               ))}
             </ul>
           </div>
@@ -72,9 +73,9 @@ function Navbar() {
       {/* navItems for mobile devices  */}
       <div className={`space-y-4 px-4 pt-24 md:hidden lg:hidden pb-5 text-xl bg-secondary ${isMenuOpen?'block fixed top-0 right-0 left-0':'hidden'}`}>
       {navItems.map(({ link, path }) => (
-                <a key={link} href={path} className="block hover:text-gray-300">
+                <Link spy={true} smooth={true} onClick={toggleMenu} offset={-80} activeClass="active" key={link} to={path} className="block hover:text-gray-300 cursor-pointer text-white">
                   {link}
-                </a>
+                </Link>
               ))}
       </div>
     </>
