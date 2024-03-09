@@ -20,7 +20,7 @@ function App() {
     <About/>
     <Pricing/>
     <Newsletter/>
-    <Footer/>
+    
     </>
   )
 }

@@ -3,7 +3,7 @@ import { FaSquareFacebook,FaInstagram,FaSquareXTwitter,FaLinkedin,FaYoutube } fr
 
 function Footer() {
   return (
-    <div className="bg-[#010851] md:px-14 p-4 max-w-screen-2xl mx-auto text-white">
+    <div className="bg-[#010851] md:px-14 p-4 max-w-screen-2xl w-full  mx-auto text-white">
       <div className="my-12  flex flex-col md:flex-row gap-10 ">
         <div className="md:w-1/3 lg:w-1/3 space-y-8">
           <a
