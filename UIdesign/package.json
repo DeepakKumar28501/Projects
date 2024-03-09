@@ -1,4 +1,4 @@
-{
+{  "homepage": "https://DeepakKumar28501.github.io/Projects/uidesign",
   "name": "uidesign",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +8,6 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "homepage": "https://DeepakKumar28501.github.io/Projects/uidesign",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
