@@ -9,11 +9,10 @@ function Layout() {
    <Header/>
     <Outlet />
    <Footer/>
-   
    </>
    
    
-  )
+  ) 
 }
 
 export default Layout
