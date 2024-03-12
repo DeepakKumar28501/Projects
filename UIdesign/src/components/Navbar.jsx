@@ -55,7 +55,7 @@ function Navbar() {
             </button>
           </div>
           {/* menu btn. only display on mobile  */}
-          <div className="md:hidden ">
+          <div className="md:hidden pr-2 ">
             <button
               onClick={toggleMenu}
               className="text-white focus:outline-none text-lg  focus:text-gray-300"
